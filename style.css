@@ -1,15 +1,29 @@
-.box {
-    background-color: rgb(58, 66, 66);
-    width: 400px;
-    height: 400px;
-    margin: auto;
+html {
+    background-color: rgb(48, 97, 48);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 h1{
     color: rgb(223, 237, 249);
+    margin: 15px 10px 300px 100px;
 
+}
+
+input {
+    padding: 5px;
 }
 
 body {
     align-items: center;
+    
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    background-color: rgb(58, 66, 66);
+    width: 400px;
+    height: 600px;
+    margin: auto;
+    border-radius: 12px;
 }
