@@ -1,28 +1,17 @@
-html {
-    background-color: rgb(48, 97, 48);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
+* {
+    margin: 0;
+    padding: 0;
 
-h1{
-    color: rgb(223, 237, 249);
-
-}
-
-input {
-    padding: 5px;
 }
 
 body {
-    
-    
-}
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: rgb(48, 97, 48);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 
-.box {
-    background-color: rgb(58, 66, 66);
-    width: 400px;
-    height: 600px;
-    margin: auto;
-    border-radius: 12px;
 }
 
 .content {
@@ -30,6 +19,101 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
+    background-color: rgb(58, 66, 66);
+    max-width: 400px;
+    height: 600px;
+    margin: auto;
+    padding: 16px 25px;
+    border-radius: 7px;
+    transition: height 0.5s ease ;
 }
 
+.content-active {
+    height: 530px;
+
+}
+
+header h1 {
+    text-align: center;
+    color: rgb(223, 237, 249);
+    font-weight: 600;
+    font-size: 33px;
+
+}
+
+input {
+    padding: 5px;
+    
+}
+
+
+header p {
+    color: rgb(223, 237, 249); ;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+}
+
+.content .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+
+
+.content :where(input,button) {
+    width: 100%;
+    height: 55px;
+    border: none;
+    outline: none;
+    border-radius: 7px;
+    
+    
+}
+
+
+.form input {
+    width: 100%;
+    padding: 0 17px;
+    box-sizing: border-box;
+    font-size: 18px;
+    border: 1px solid grey
+}
+
+.form button {
+    color: white;
+    background: rgb(50, 117, 76);
+    font-size: 18px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+    transition: all 0.5 ease;
+}
+
+.form button:hover {
+    background: #68958a;
+}
+
+.content .qrcode {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 33px 0;
+    pointer-events: none;
+}
+
+.qrcode .img {
+    width: 220px;
+    height: auto;
+}
+
+.content.active .qrcode{
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.5 ease;
+
+}

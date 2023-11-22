@@ -7,21 +7,20 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div class="box">
         <div class="content">
-            <h1>Gerador de QR code</h1>
-            <input id="texto" type="text" >
-            <button id="qrBtn" onclick="gerarQRCode()">Gerar</button>
-        
-            <div id="qrcode">
-                
-            </div>
+            <header>
+                <h1>Gerador de QR code</h1>
+                <p>Insira uma URL para gerar o QRCode</p>
+            </header>
+            <main class="form">
+                <input id="qrInput" type="text" placeholder="Insira a URL" >
+                <button id="qrBtn" onclick="gerarQRCode()">Gerar</button>
+            </main>
+            <footer class="qrcode">
+                <img src="" alt="" class="img" id="qrImg">
+            </footer>
         </div>
-        
-    </div>
 
-
-  
     <script src="./script.js"></script>  
 </body>
 </html>
